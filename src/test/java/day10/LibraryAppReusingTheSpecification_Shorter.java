@@ -58,7 +58,9 @@ public class LibraryAppReusingTheSpecification_Shorter {
                  .get("/get_book_categories");
          List<Category> categoryList = response.jsonPath().getList("", Category.class) ;
         System.out.println("categoryList = " + categoryList);
-
+        
+        List<Map<Integer, String >> categoryMApList=response.jsonPath().getList("");
+        System.out.println("categoryMApList = " + categoryMApList);
     }
 
     @DisplayName("Testing GET /get_all_users Endpoint with spec")
